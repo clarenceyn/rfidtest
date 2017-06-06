@@ -427,6 +427,10 @@
             <security-domains>
                 <security-domain name="other" cache-type="default">
                     <authentication>
+						<login-module code="UsersRoles" flag="required">
+							<module-option name="usersProperties" value="${jboss.server.config.dir}/rest-users.properties"/>
+							<module-option name="rolesProperties" value="${jboss.server.config.dir}/rest-roles.properties"/>
+						</login-module>
                         <login-module code="Remoting" flag="optional">
                             <module-option name="password-stacking" value="useFirstPass"/>
                         </login-module>
