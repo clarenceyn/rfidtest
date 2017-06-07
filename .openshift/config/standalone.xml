@@ -425,7 +425,7 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:security:1.2">
             <security-domains>
-                <security-domain name="other" cache-type="default">
+                <security-domain name="JBossRS" cache-type="default">
                     <authentication>
 						<login-module code="UsersRoles" flag="required">
 							<module-option name="usersProperties" value="${jboss.server.config.dir}/rest-users.properties"/>
